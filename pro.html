@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puzzle Drag & Drop</title>
+  <link rel="stylesheet" href="pro.css">
+</head>
+<body>
+  <h1> 🌺Puzzle🌺 </h1>
+  
+  <form id="intro-form" class="intro-form">
+    <h2>Présente-toi avant de jouer</h2>
+    <label for="name">Nom :</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email (lettres seulement, ex: prenom@domaine.com) :</label>
+    
+    <input type="email" id="email" name="email"
+      pattern="^[A-Za-z]+@([A-Za-z]+\.)+[A-Za-z]{2,}$"
+      title="Utilisez uniquement des lettres dans l'adresse (ex: prenom@domaine.com)">
+
+    
+    <button id="start-puzzle" type="button">Commencer le puzzle</button>
+  </form>
+
+  <div class="puzzle-container" style="display:none;" id="puzzle-area">
+    <div id="pieces" class="zone-pieces"></div>
+    <div id="board" class="zone-puzzle"></div>
+  </div>
+  <p id="message"></p>
+  <button id="replay"> Rejouer</button>
+  <button id="reset" style="display:none; margin-left:8px;">Réinitialiser puzzle (ou appuyer sur R)</button>
+  <script src="pro.js"></script>
+</body>
+</html>
